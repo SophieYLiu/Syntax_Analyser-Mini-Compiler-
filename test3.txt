@@ -1,0 +1,19 @@
+$$
+function exchange(x real)
+{    
+     return x=x/6.2;
+}
+$$
+real price, rmb, change;
+if(rmb>price)
+{
+    change=exchange(rmb)-price;
+    change=exchange(change);
+    write(change);
+}
+
+else
+    return;
+fi
+}
+$$

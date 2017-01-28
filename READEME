@@ -1,0 +1,38 @@
+
+1.	Problem Statement
+The purpose of this assignment is to write a syntax analyzer, by using top down parser – Recursive Predictive Parser.
+
+2.	How to use your program 
+     1. Save the test cases in local paths (test1.txt, test2.txt, test3.txt, test4.txt)
+     2. Double click the executable file (Lexer_YL.exe) 
+3.	Input the test file’s path (eg: C:\Users\Yu\Desktop\test1.txt)
+4.	Open the file “ratLog” and see the outputs
+
+5.	Design of your program
+a.	Use lexer (from assignment 1) to obtain tokens
+b.	Remove left-recursions
+7 new introduced Non-Terminal: M, G, Q, H, P, Eprime, Tprime
+The rest of gramma remains the same except the below:
+
+1.<Function Definitions>::=<Function><M>
+  <M>::=<Function Definitions>| ɛ
+2.<Parameters>::=<Parameter><G>
+  <G>::=,<Parameters>| ɛ
+3.<Declaration List>::=<Declaration>;<Q>
+  <Q>::=<Declaration List>| ɛ
+4.<IDs>::=<Identifier><H>
+  <H>::=,<IDs>| ɛ
+5.<Statement List>::=<Statement><P>
+  <P>::=<Statement List>| ɛ
+6.<Expression>::=<Term><Eprime>
+  <Eprime>::=+<Term><Eprime>|-<Term><Eprime>| ɛ
+7.<Term>::=<Factor><Tprime>
+  <Tprime>::=*<Factor><Tprime>|/<Factor><Tprime>| ɛ
+c.	Write a (function) procedure for each non-terminal symbol (except <integer>, <real>, <integer> and <empty>), according to Rat15Su’s grammar. 
+
+6.	Any Limitation
+0.	No case conversion
+
+7.	Any shortcomings
+Partially correct analysis(working in progress).
+

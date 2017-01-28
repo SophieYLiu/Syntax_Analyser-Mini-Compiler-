@@ -1,0 +1,14 @@
+$$
+function convert(fahr integer)
+{
+   return 5*(fahr-32)/9;
+}
+$$
+integer low,high,step;
+read(low, high, step);
+while(low<high){
+   write(low);
+   write(convert(x));
+   low=low+step;
+}
+$$

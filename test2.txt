@@ -1,0 +1,9 @@
+$$
+function convert(far integer)
+{
+   return x;
+}
+$$
+integer x, y;
+write(convert(x));
+return x;
